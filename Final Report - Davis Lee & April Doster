@@ -1,0 +1,29 @@
+Report: Conrona Virus & World Population
+Davis Lee & April Doster
+
+Final Report:
+
+Extract: our original data sources and how the data was formatted (CSV)
+We pulled two sources of data from kaggle: 
+1) Novel Corona Virus 2019 Dataset.csv
+2) World Population Dataset.csv
+
+Transform: We pulled the data, sorted, used groupby and joined the data so we could compare the factors.
+Corona_DataFrame
+1) Filtered only the latest data (which was 2/10/2020)
+2) Used groupby method in pandas so we can take "Country" as primary key
+
+Census_DataFrame
+1) Filtered only the latest data (which was 2020)
+2) Used pivot method within pandas so that "Country Name" can serve as primary key
+3) Used dropna method within pandas to remove NaN data
+
+--> Merged corona_dataframe & census_dataframe on "Country" and "Country Name" as they were the primary keys of each dataframe.
+
+
+Loaded: the final database, tables/collections, and why this was chosen.
+Our goal was to find out how many people are at potentially at risk for the Coronavirus  as of 2/20/2020:
+1) Country Population
+2) Urban vs Rural Population factors
+3) Age Factors - (65+)
+
